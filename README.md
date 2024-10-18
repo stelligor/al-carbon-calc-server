@@ -9,13 +9,15 @@ There are only 3 endpoints that need to be implemented:
 ### [POST] /open/start-calc
 
 Starts the calculation process. Receives the user basic info and stores it in the database. Returns the calculation's id
-to be used in the following endpoints.
+to be used in the following endpoints. For this endpoint, every parameter is mandatory (name, email, phoneNumber and
+UF).
 
 ### [PUT] /open/info
 
 Receives information needed to calculate the user's carbon emission (energy consumption, transportation and solid waste
-production) and stores it in the
-database.
+production) and stores it in the database.
+
+Please consider `recyclePercentage` as a double from 0 to 1.0, representing the percentage of recyclable solid waste.
 
 ### [GET] /open/result/{id}
 
@@ -68,8 +70,8 @@ There is a swagger documentation available on http://localhost:8085/swagger-ui.h
 
 ### Classes already created
 
-We created the classes for the RestController and the DTOs needed to execute its endpoints. There's no need to change
-the DTOs.
+We created the classes for the RestController and the DTOs needed to execute its endpoints. If you want to change them,
+please keep the same property names - don't break the defined interface.
 
 We also created 3 basic models and their corresponding Repository interfaces for the carbon emission values that you
 need to use in your implementations. These are the objects pre-populated in the
@@ -85,6 +87,7 @@ Your test will be evaluated both on the correctness of the implementation and th
 There is no need to host this server. Publish your code in a public repository and share it with us, so we can download
 your code and run it.
 
-Good luck! :smile:
+Forks are disabled in this repository, so you should download the code and create a new repository with your
+implementation.
 
-```
+Good luck! :smile:
