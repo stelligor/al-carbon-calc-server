@@ -35,7 +35,8 @@ db.getCollection("energyEmissionFactor").insertMany([
 db.getCollection("transportationEmissionFactor").insertMany([
   { "_id": "CAR", "factor": 0.19 },
   { "_id": "MOTORCYCLE", "factor": 0.09 },
-  { "_id": "PUBLIC_TRANSPORT", "factor": 0.04 }
+  { "_id": "PUBLIC_TRANSPORT", "factor": 0.04 },
+    { "_id": "BICYCLE", "factor": 0 }
 ]);
 
 
