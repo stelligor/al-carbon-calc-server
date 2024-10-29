@@ -8,7 +8,8 @@ There are only 3 endpoints that need to be implemented:
 
 ### [POST] /open/start-calc
 
-Starts the calculation process. Receives the user basic info and stores it in the database. Returns the calculation's id
+Starts the calculation process. Receives the user basic info and stores a new calculation in the database. Returns the
+calculation's id
 to be used in the following endpoints. For this endpoint, every parameter is mandatory (name, email, phoneNumber and
 UF).
 
