@@ -5,6 +5,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EnergyEmissionFactorRepository extends MongoRepository<EnergyEmissionFactor, String> {
-    EnergyEmissionFactor findByUf(String uf);
+public interface CarbonCalculatorRepository extends MongoRepository<StartCalcRequestDTO, String> {
+
 }

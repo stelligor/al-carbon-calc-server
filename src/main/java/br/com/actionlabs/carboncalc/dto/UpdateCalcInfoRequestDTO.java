@@ -7,7 +7,8 @@ import java.util.List;
 @Data
 public class UpdateCalcInfoRequestDTO {
   private String id;
-  private int energyConsumption;
+  private Double energyConsumption;
+  private String uf;
   private List<TransportationDTO> transportation;
   private int solidWasteTotal;
   private double recyclePercentage;
