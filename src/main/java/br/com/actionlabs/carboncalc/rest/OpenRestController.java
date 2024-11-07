@@ -58,7 +58,7 @@ public class OpenRestController {
   public ResponseEntity<UpdateCalcInfoResponseDTO> updateInfo(
       @RequestBody UpdateCalcInfoRequestDTO request) {
 
-    Optional<CarbonCalculation> calculationOpt = carbonCalculationRepository.findById(request.getId());
+    Optional<CarbonCalculation> calculationOpt = carbonCalculatorRepository.findById(request.getId());
     if (calculationOpt.isEmpty()) {
       return ResponseEntity.notFound().build();
     }
@@ -81,7 +81,7 @@ public class OpenRestController {
     calculation.setRecyclePercentage(request.getRecyclePercentage());
 
     // Salvar as alterações no banco de dados
-    carbonCalculationRepository.save(calculation);
+    carbonCalculatorRepository.save(calculation);
 
     // Retornar resposta
     UpdateCalcInfoResponseDTO response = new UpdateCalcInfoResponseDTO(true);
